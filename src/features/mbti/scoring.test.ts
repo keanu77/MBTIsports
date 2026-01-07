@@ -210,20 +210,20 @@ describe('getDimensionLabel', () => {
 
   it('should return correct labels for SN dimension', () => {
     const labels = getDimensionLabel('SN');
-    expect(labels.poleA).toBe('實感 (S)');
+    expect(labels.poleA).toBe('務實 (S)');
     expect(labels.poleB).toBe('直覺 (N)');
   });
 
   it('should return correct labels for TF dimension', () => {
     const labels = getDimensionLabel('TF');
-    expect(labels.poleA).toBe('思考 (T)');
-    expect(labels.poleB).toBe('情感 (F)');
+    expect(labels.poleA).toBe('理性 (T)');
+    expect(labels.poleB).toBe('感性 (F)');
   });
 
   it('should return correct labels for JP dimension', () => {
     const labels = getDimensionLabel('JP');
-    expect(labels.poleA).toBe('判斷 (J)');
-    expect(labels.poleB).toBe('知覺 (P)');
+    expect(labels.poleA).toBe('計畫 (J)');
+    expect(labels.poleB).toBe('隨性 (P)');
   });
 });
 

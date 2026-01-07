@@ -1,6 +1,6 @@
 'use client';
 
-import { HTMLAttributes, forwardRef } from 'react';
+import { HTMLAttributes, forwardRef, memo } from 'react';
 
 interface ProgressProps extends HTMLAttributes<HTMLDivElement> {
   value: number;
@@ -10,7 +10,7 @@ interface ProgressProps extends HTMLAttributes<HTMLDivElement> {
   color?: 'blue' | 'green' | 'purple' | 'orange';
 }
 
-export const Progress = forwardRef<HTMLDivElement, ProgressProps>(
+export const Progress = memo(forwardRef<HTMLDivElement, ProgressProps>(
   ({ className = '', value, max = 100, showLabel = false, size = 'md', color = 'blue', ...props }, ref) => {
     const percent = Math.min(Math.max((value / max) * 100, 0), 100);
 
@@ -44,7 +44,7 @@ export const Progress = forwardRef<HTMLDivElement, ProgressProps>(
       </div>
     );
   }
-);
+));
 
 Progress.displayName = 'Progress';
 
