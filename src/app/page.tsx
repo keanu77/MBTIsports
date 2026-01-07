@@ -94,7 +94,7 @@ export default function Home() {
 
         {/* About Section */}
         <div className="text-center text-gray-500 text-sm">
-          <p>此測驗基於 MBTI 人格理論，結合運動心理學情境設計</p>
+          <p>此測驗基於 MBTI 人格理論，模擬運動心理學情境設計</p>
           <p className="mt-2">16 種運動人格類型等你探索</p>
           <p className="mt-4">
             製作者：
