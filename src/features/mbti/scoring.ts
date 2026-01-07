@@ -101,9 +101,9 @@ export function isValidMBTIType(type: string): type is MBTIType {
 export function getDimensionLabel(dim: Dimension): { poleA: string; poleB: string } {
   const labels: Record<Dimension, { poleA: string; poleB: string }> = {
     EI: { poleA: '外向 (E)', poleB: '內向 (I)' },
-    SN: { poleA: '實感 (S)', poleB: '直覺 (N)' },
-    TF: { poleA: '思考 (T)', poleB: '情感 (F)' },
-    JP: { poleA: '判斷 (J)', poleB: '知覺 (P)' },
+    SN: { poleA: '務實 (S)', poleB: '直覺 (N)' },
+    TF: { poleA: '理性 (T)', poleB: '感性 (F)' },
+    JP: { poleA: '計畫 (J)', poleB: '隨性 (P)' },
   };
   return labels[dim];
 }
