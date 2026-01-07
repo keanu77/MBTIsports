@@ -263,8 +263,34 @@ export default function ResultPage() {
           )}
         </div>
 
+        {/* Educational Note */}
+        <div className="mt-8 p-5 bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl border border-blue-100">
+          <h4 className="font-semibold text-gray-800 mb-3 flex items-center gap-2">
+            <span className="text-blue-500">💡</span>
+            關於運動人格的重要提醒
+          </h4>
+          <ul className="space-y-2 text-sm text-gray-700">
+            <li className="flex items-start gap-2">
+              <span className="text-blue-400 mt-0.5">•</span>
+              <span><strong>沒有所謂的「冠軍人格」</strong>——各種類型的運動員都有機會在運動場上取得卓越成就</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-blue-400 mt-0.5">•</span>
+              <span>雖然某些特質在特定情境有優勢，但<strong>後天的心理技能訓練 (PST) 可以彌補先天的性格弱點</strong></span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-blue-400 mt-0.5">•</span>
+              <span>內向者也可能成為優秀隊長（透過以身作則的領導風格）</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-blue-400 mt-0.5">•</span>
+              <span>感性者也能在關鍵時刻冷靜決策（透過情緒調節訓練）</span>
+            </li>
+          </ul>
+        </div>
+
         {/* Disclaimer */}
-        <div className="mt-8 p-4 bg-gray-100 rounded-lg text-center text-sm text-gray-600">
+        <div className="mt-4 p-4 bg-gray-100 rounded-lg text-center text-sm text-gray-600">
           <p>本測驗結果僅供參考，不代表專業心理評估或醫療診斷</p>
           <p className="mt-1">如有任何疑慮，請諮詢專業人士</p>
         </div>
