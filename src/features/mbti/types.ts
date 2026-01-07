@@ -51,6 +51,37 @@ export interface ScoringResult {
   rawAnswers: AnswerMap;
 }
 
+// Cognitive Function (認知功能)
+export interface CognitiveFunctionItem {
+  code: string;      // Ti, Te, Fi, Fe, Si, Se, Ni, Ne
+  name: string;      // 內傾思考、外傾思考...
+  description: string;  // 運動場景中的表現
+}
+
+export interface CognitiveFunctions {
+  dominant: CognitiveFunctionItem;   // 主導功能
+  auxiliary: CognitiveFunctionItem;  // 輔助功能
+  tertiary: CognitiveFunctionItem;   // 第三功能
+  inferior: CognitiveFunctionItem;   // 劣勢功能
+  sportApplication: string;          // 運動應用總結
+}
+
+// Injury Risk Profile (傷害風險檔案)
+export interface InjuryRiskProfile {
+  riskType: string;              // 風險類型名稱
+  description: string;           // 風險描述
+  warningSignals: string[];      // 警示訊號
+  preventionStrategies: string[]; // 預防策略
+}
+
+// Communication Style (溝通風格)
+export interface CommunicationStyle {
+  asAthlete: string[];           // 作為運動員的溝通特點
+  coachingApproach: string;      // 教練應採用的指導方式
+  motivationTriggers: string[];  // 有效激勵方式
+  conflictStyle: string;         // 衝突處理傾向
+}
+
 // 16 Type Profile Content
 export interface TypeProfile {
   type: MBTIType;
@@ -68,4 +99,8 @@ export interface TypeProfile {
   coachTips: string[];
   sportFit: string[];
   riskBehaviors: string[];
+  // 新增欄位（可選，未來擴充用）
+  cognitiveFunctions?: CognitiveFunctions;
+  injuryRiskProfile?: InjuryRiskProfile;
+  communicationStyle?: CommunicationStyle;
 }
