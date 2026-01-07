@@ -269,24 +269,67 @@ export default function ResultPage() {
             <span className="text-blue-500">💡</span>
             關於運動人格的重要提醒
           </h4>
-          <ul className="space-y-2 text-sm text-gray-700">
-            <li className="flex items-start gap-2">
-              <span className="text-blue-400 mt-0.5">•</span>
-              <span><strong>沒有所謂的「冠軍人格」</strong>——各種類型的運動員都有機會在運動場上取得卓越成就</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="text-blue-400 mt-0.5">•</span>
-              <span>雖然某些特質在特定情境有優勢，但<strong>後天的心理技能訓練 (PST) 可以彌補先天的性格弱點</strong></span>
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="text-blue-400 mt-0.5">•</span>
-              <span>內向者也可能成為優秀隊長（透過以身作則的領導風格）</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="text-blue-400 mt-0.5">•</span>
-              <span>感性者也能在關鍵時刻冷靜決策（透過情緒調節訓練）</span>
-            </li>
-          </ul>
+
+          {/* 迷思破解 */}
+          <div className="mb-4">
+            <p className="text-xs font-medium text-gray-500 mb-2">▎迷思破解</p>
+            <ul className="space-y-2 text-sm text-gray-700">
+              <li className="flex items-start gap-2">
+                <span className="text-blue-400 mt-0.5">•</span>
+                <span><strong>沒有所謂的「冠軍人格」</strong>——各種類型的運動員都有機會取得卓越成就</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-blue-400 mt-0.5">•</span>
+                <span>後天的<strong>心理技能訓練 (PST)</strong> 可以彌補先天的性格弱點</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-blue-400 mt-0.5">•</span>
+                <span>內向者也能成為優秀隊長（以身作則的領導風格）</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-blue-400 mt-0.5">•</span>
+                <span>感性者也能在關鍵時刻冷靜決策（情緒調節訓練）</span>
+              </li>
+            </ul>
+          </div>
+
+          {/* MBTI 的科學定位 */}
+          <div className="mb-4">
+            <p className="text-xs font-medium text-gray-500 mb-2">▎MBTI 的科學定位</p>
+            <ul className="space-y-2 text-sm text-gray-700">
+              <li className="flex items-start gap-2">
+                <span className="text-purple-400 mt-0.5">•</span>
+                <span>運動心理學研究多採用「大五人格模型」，其中<strong>盡責性</strong>是預測運動成功最強的指標</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-purple-400 mt-0.5">•</span>
+                <span>MBTI 的二分法（E/I）較為粗略——運動員特質往往是<strong>連續光譜</strong>，可因情境而變化</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-purple-400 mt-0.5">•</span>
+                <span>MBTI 不測量「情緒穩定性」，但這對抗壓表現至關重要</span>
+              </li>
+            </ul>
+          </div>
+
+          {/* 本測驗的正確用途 */}
+          <div>
+            <p className="text-xs font-medium text-gray-500 mb-2">▎本測驗的正確用途</p>
+            <ul className="space-y-2 text-sm text-gray-700">
+              <li className="flex items-start gap-2">
+                <span className="text-green-500 mt-0.5">✓</span>
+                <span><strong>自我覺察工具</strong>：了解自己的訓練與溝通偏好</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-green-500 mt-0.5">✓</span>
+                <span><strong>團隊溝通潤滑劑</strong>：理解隊友的回饋接受方式（T 型偏好數據、F 型需要情感連結）</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-red-400 mt-0.5">✗</span>
+                <span><strong>不適合用於</strong>：人才篩選、預測比賽成績、取代專業心理評估</span>
+              </li>
+            </ul>
+          </div>
         </div>
 
         {/* Disclaimer */}
