@@ -74,6 +74,11 @@ export default function RootLayout({
         <Script id="sw-register" strategy="afterInteractive">
           {`
             if ('serviceWorker' in navigator) {
+              // 只有頁面載入時已經被舊 SW 控制，之後出現的新 worker 才算「更新」。
+              // updatefound 在首次安裝也會觸發，而 sw.js 有 clients.claim()，
+              // 所以不能用 register 之後的 controller 判斷，否則每位新訪客
+              // 都會在載入後幾秒看到「有新版本可用」的 confirm 對話框。
+              const hadController = !!navigator.serviceWorker.controller;
               navigator.serviceWorker.register('/sw.js')
                 .then((reg) => {
                   console.log('SW registered');
@@ -82,7 +87,7 @@ export default function RootLayout({
                     const newWorker = reg.installing;
                     if (newWorker) {
                       newWorker.onstatechange = () => {
-                        if (newWorker.state === 'activated' && navigator.serviceWorker.controller) {
+                        if (hadController && newWorker.state === 'activated') {
                           if (confirm('有新版本可用，是否重新載入？')) {
                             window.location.reload();
                           }
